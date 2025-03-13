@@ -1,17 +1,11 @@
 // header
 .header{
-    top: 4%;
-    right: -8%;
-    width: 100%;
+    right: 6%;
     z-index: 30;
     position: fixed;
     background: none;
-    padding-top: .5em;
-    // md
-    @media (max-width: 899px) {
-        top: 4%;
-        right: 0%;
-    }
+    margin-top: 2.5em;
+    max-width: fit-content;
 
 
     .header__nav{
@@ -34,8 +28,8 @@
         background-color: rgba($clr-dark, .6);
 
         @media (max-width: 899px) {
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
         }
     }
 }
@@ -170,14 +164,18 @@
 
 // services
 .services{
+    display: flex;
     min-height: 60vh;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: $clr-blue;
 
     .services__subtitle{
         font-weight: 600;
-        margin-top: 1em;
         color: $clr-light;
+        font-size: $size-2xl;
+        max-width: fit-content;
     }
 
     .services__offers{
@@ -229,14 +227,22 @@
 
 /* md 768px */
 @media (max-width: 48rem) {
-    .services__title{
+    .services__subtitle{
         font-size: $size-xl;
+    }
+
+
+    .services__title{
+        font-size: $size-2xl;
     }
 }
 
-/* sm 640px */
-@media (max-width: 40rem) {
-    min-height: 100dvh;
+
+@media (max-width: 1228px) {
+    .services__subtitle{
+        margin-top: 2em;
+    }
+
     .services__offers{
         gap: 2.5em;
     }
